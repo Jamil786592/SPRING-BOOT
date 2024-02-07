@@ -21,6 +21,6 @@ public class JobSearchApplication {
 
     @GetMapping("/hi")
     public String getValues() {
-        return "Hi Jenkins  World";
+        return "Hi Jenkin  World";
     }
 }
