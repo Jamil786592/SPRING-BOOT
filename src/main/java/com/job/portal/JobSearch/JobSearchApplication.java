@@ -16,7 +16,7 @@ public class JobSearchApplication {
 
     @GetMapping("/hello")
     public String getValue() {
-        return "hello Portals";
+        return "hello Portal FEB 10";
     }
 
     @GetMapping("/hi")
