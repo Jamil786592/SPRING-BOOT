@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @SpringBootApplication
@@ -35,5 +36,12 @@ public class JobSearchApplication {
         List<Emplye> emplyes= employeeResp.findAll();
         System.out.println(emplyes);
         return  emplyes;
+    }
+
+    @GetMapping("/name")
+    public List<String> getNames(){
+        List<Emplye> emplyes= employeeResp.findAll();
+        List<String> names=emplyes.stream().map(x->x.getName()).collect(Collectors.toList());
+        return  names;
     }
 }
