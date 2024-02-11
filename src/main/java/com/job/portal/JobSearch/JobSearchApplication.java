@@ -32,6 +32,8 @@ public class JobSearchApplication {
     }
     @GetMapping("/employee")
     public List<Emplye> getALlValue(){
-        return employeeResp.findAll();
+        List<Emplye> emplyes= employeeResp.findAll();
+        System.out.println(emplyes);
+        return  emplyes;
     }
 }
