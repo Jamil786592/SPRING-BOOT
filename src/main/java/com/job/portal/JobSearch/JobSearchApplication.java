@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
+
 @SpringBootApplication
-@CrossOrigin(origins = "http://localhost:3000")
+
 public class JobSearchApplication {
     @Autowired
     private EmployeeResp employeeResp;
@@ -24,27 +24,5 @@ public class JobSearchApplication {
     }
 
 
-    @GetMapping("/hello")
-    public String getValue() {
-        return "hello Portal FEB 11";
-    }
 
-    @GetMapping("/hi")
-    public String getValues() {
-        return "Hi Jenkin  World";
-    }
-    @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("/employee")
-    public List<Emplye> getALlValue(){
-        List<Emplye> emplyes= employeeResp.findAll();
-        System.out.println(emplyes);
-        return  emplyes;
-    }
-    @CrossOrigin(origins = "http://localhost:3000")
-    @GetMapping("/name")
-    public List<String> getNames(){
-        List<Emplye> emplyes= employeeResp.findAll();
-        List<String> names=emplyes.stream().map(x->x.getName()).collect(Collectors.toList());
-        return  names;
-    }
 }
