@@ -1,3 +1,4 @@
+/*
 package com.job.portal.JobSearch.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -16,4 +17,4 @@ public class CorsConfig implements WebMvcConfigurer {
                 .exposedHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Credentials")
                 .allowCredentials(true).maxAge(3600);
     }
-}
+}*/
