@@ -33,13 +33,14 @@ public class JobSearchApplication {
     public String getValues() {
         return "Hi Jenkin  World";
     }
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/employee")
     public List<Emplye> getALlValue(){
         List<Emplye> emplyes= employeeResp.findAll();
         System.out.println(emplyes);
         return  emplyes;
     }
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/name")
     public List<String> getNames(){
         List<Emplye> emplyes= employeeResp.findAll();
